@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Product Section */
+        .product {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            flex: 2;
+            padding: 20px;
+        }
+        .product-details h1 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .product-details p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .product-details .price {
+            font-size: 1.5em;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        .product-details button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .product-details button:hover {
+            background-color: #218838;
+        }
+
+        /* Customer Reviews */
+        .reviews {
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .reviews h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews .review {
+            margin-bottom: 15px;
+        }
+        .reviews .review p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* Related Products */
+        .related-products {
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .related-products h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .related-products .product-item {
+            display: inline-block;
+            width: 24%;
+            margin: 1%;
+            vertical-align: top;
+            text-align: center;
+        }
+        .related-products .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .related-products .product-item p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .product {
+                flex-direction: column;
+            }
+            .product-image,
+            .product-details {
+                flex: none;
+                width: 100%;
+            }
+            .related-products .product-item {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .related-products .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Product Section -->
+        <div class="product">
+            <div class="product-image">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ0bmHX_d1fUxRWOu70t9SS_RpsyQrHNSUm3Wf-NpIzoQfWw8_D2nuots9GVWlO8fs_JNkQLUy8Ua_LF7ZoveHxavGl0jXDvj86GHqsOaTv6D4dFtL5ZMS7" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h1>Realme</h1>
+                <p>This phone has a 5000mAh battery,<br> AI cooling, and screen power saving</p>
+                <p class="price">$99.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p><strong>John Doe:</strong> Great product! It exceeded my expectations.</p>
+            </div>
+            <div class="review">
+                <p><strong>Jane Smith:</strong> Very satisfied with the purchase. Highly recommend!</p>
+            </div>
+            <div class="review">
+                <p><strong>Mike Johnson:</strong> Good quality, but the delivery was a bit slow.</p>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products">
+            <h2>Related Products</h2>
+            <div class="product-item">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQXKe-CNfr9rPm0oBVY7FJzG-Vu-pkaFvInV_kLoPpE4d57Q6aYmpJl9HC5w6TNEA7B4FZA9fpGW4cA3g6JT5oVs5b1uUGWed_r6nuqVQ8qkHZU7ByqO8Mj" alt="Related Product 1">
+                <p>Related Product 1</p>
+                <p>$49.99</p>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQS_-m61g0AwMTIpsl_KsPkOxI-xXs7R_jbxOhYZm1bowUXZxuroVcuYIkQH4UxjKZcy3R2PUKZr49uVUdfM2WRRym18hOmmltvApf8w0Ni" alt="Related Product 2">
+                <p>Related Product 2</p>
+                <p>$59.99</p>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/71yFeJkAriL.jpg" alt="Related Product 3">
+                <p>Related Product 3</p>
+                <p>$39.99</p>
+            </div>
+            <div class="product-item">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQjqeXeIKOTCldX_jpNfYoEbSJ2Ojw9-Nt_KOd2MWY52EQh3aGG96XilKZzvUSqM1Ugx7nip9gGIhm0f7TVUZbanoA3Cv25r9wKB2K3GhjL" alt="Related Product 4">
+                <p>Related Product 4</p>
+                <p>$29.99</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
